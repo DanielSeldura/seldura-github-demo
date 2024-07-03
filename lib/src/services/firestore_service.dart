@@ -15,6 +15,7 @@ class FirestoreService {
     return user.data();
   }
 
+  ///This function deletes a user entry. Maybe needs trycatch?
   static Future<void> deleteUser(
     String uid,
   ) async {

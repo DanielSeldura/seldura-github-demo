@@ -21,4 +21,9 @@ class FirestoreService {
   ) async {
     await FirebaseFirestore.instance.collection("users").doc(uid).delete();
   }
+
+  ///yeah I forgot to trycatch here too. But this updates the users.
+  static Future<void> updateUser(String uid, Map<String, dynamic> fields) async {
+    await FirebaseFirestore.instance.collection("users").doc(uid).update(fields);
+  }
 }
